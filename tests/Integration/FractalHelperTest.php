@@ -11,6 +11,6 @@ class FractalHelperTest extends TestCase
      */
     public function it_return_an_instance_of_fractal()
     {
-        $this->assertInstanceOf(Fractal::class, fractal());
+        $this->assertInstanceOf('\Spatie\Fractal\Fractal', fractal());
     }
 }

@@ -29,7 +29,7 @@ abstract class TestCase extends Orchestra
 
         parent::setUp();
 
-        $this->fractal = $this->app->make(Fractal::class);
+        $this->fractal = $this->app->make('\Spatie\Fractal\Fractal');
 
         $this->testBooks = [
             [
@@ -59,7 +59,7 @@ abstract class TestCase extends Orchestra
      */
     protected function getPackageProviders($app)
     {
-        return [FractalServiceProvider::class];
+        return ['\Spatie\Fractal\FractalServiceProvider'];
     }
 
     protected function getPackageAliases($app)

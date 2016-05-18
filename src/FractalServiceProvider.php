@@ -25,7 +25,7 @@ class FractalServiceProvider extends ServiceProvider
     {
         $this->mergeConfigFrom(__DIR__.'/../resources/config/laravel-fractal.php', 'laravel-fractal');
 
-        $this->app->bind(Fractal::class, function () {
+        $this->app->bind('\Spatie\Fractal\Fractal', function () {
 
             $manager = new Manager();
 
@@ -40,7 +40,7 @@ class FractalServiceProvider extends ServiceProvider
             return $fractal;
         });
 
-        $this->app->alias(Fractal::class, 'laravel-fractal');
+        $this->app->alias('\Spatie\Fractal\Fractal', 'laravel-fractal');
 
         include __DIR__.'/helpers.php';
     }

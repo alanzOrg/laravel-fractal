@@ -8,6 +8,6 @@ if (!function_exists('fractal')) {
      */
     function fractal()
     {
-        return app(\Spatie\Fractal\Fractal::class);
+        return app('\Spatie\Fractal\Fractal');
     }
 }

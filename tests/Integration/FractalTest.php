@@ -97,7 +97,7 @@ class FractalTest extends TestCase
             ->collection($this->testBooks, new TestTransformer())
             ->getResource();
 
-        $this->assertInstanceOf(\League\Fractal\Resource\ResourceInterface::class, $resource);
+        $this->assertInstanceOf('\League\Fractal\Resource\ResourceInterface', $resource);
     }
 
     /**
@@ -109,7 +109,7 @@ class FractalTest extends TestCase
             ->collection($this->testBooks, new TestTransformer())
             ->createData();
 
-        $this->assertInstanceOf(\League\Fractal\Scope::class, $resource);
+        $this->assertInstanceOf('League\Fractal\Scope', $resource);
     }
 
     /**

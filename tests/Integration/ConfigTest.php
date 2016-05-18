@@ -8,7 +8,7 @@ class ConfigTest extends TestCase
 {
     public function setUp()
     {
-        parent::setup(ArraySerializer::class);
+        parent::setup('\Spatie\Fractal\ArraySerializer');
     }
 
     /**
